@@ -1,0 +1,20 @@
+worker_processes  1;
+
+error_log  logs/error.log;
+error_log  logs/error.log  notice;
+
+events {
+    worker_connections  {{ getv "/nginx/workers"}};
+}
+
+stream {
+    upstream backend {
+        hash $remote_addr consistent;
+        {{ getv "/nginx/upstream/servers" }}
+    }
+
+    server {
+        listen {{ getv "/nginx/}};
+        proxy_pass backend;
+    }
+}
