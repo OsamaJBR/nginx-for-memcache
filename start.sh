@@ -16,4 +16,3 @@ case $command in
 	exec /usr/local/nginx/nginx -g "daemon off;"
     ;;
 esac
-	

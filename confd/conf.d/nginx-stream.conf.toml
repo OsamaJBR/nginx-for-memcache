@@ -1,6 +1,6 @@
 [template]
 src = "nginx-stream.conf.tmpl"
-dest = "/etc/nginx/conf.d/nginx-stream.conf.conf"
+dest = "/usr/local/nginx/nginx.conf"
 owner = "root"
 mode = "0644"
 keys = ["/nginx/"]
