@@ -1,7 +1,7 @@
 
 # Nginx Load Balancer for MemcacheD
 -----------------
-As know NGINX since version 1.5 can proxy and load balance TCP traffic, using the --with-steam flag in the build time. 
+As known NGINX since version 1.5 can proxy and load balance TCP traffic, using the --with-steam flag in the build time. 
 
 In this expirement I was trying to deploy a high available memcached pool of smaller instances using Nginx LB and Memcached.
 Read more about this here : http://engineering.opensooq.com/experiment-nginx-tcpudp-load-balancer-with-memcached/
