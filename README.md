@@ -17,6 +17,6 @@ docker build -f Dockerfile -t nginx-for-memcache .
 docker run -d -p 6663:6663 \
         -e NGINX_WORKERS=1024 \
         -e NGINX_PORT=6663 \
-        -e NGINX_UPSTREAM_SERVERS=server memcached1_ip:11211; server memcached1_ip:11211; \
+        -e NGINX_UPSTREAM_SERVERS='server memcached1_ip:11211; server memcached1_ip:11211;' \
         --name memcache-lb nginx-for-memcache
 ```
